@@ -58,6 +58,9 @@ map <c-h> <c-w>h
 
 set completeopt=longest,menuone,preview
 
+autocmd BufWritePost *.pyx !make build
+autocmd BufWritePost *.pxd !make build
+
 " Tab based stuff
 set smarttab
 set expandtab
@@ -140,7 +143,7 @@ let g:pymode_indent = 1
 let g:pymode_syntax_space_errors = 0
 let g:pymode_lint_checkers = ["pylint"]
 let g:pymode_lint_ignore = 'C0103,C0111,E1101,R0901,R0902,R0903,R0904,R0913,R0915,W0141,W0142,
-            \W0221,W0232,W0401,W0613,W0631,W0703,I0011,W0403,R0914,W0110,C0330,C0326'
+            \W0221,W0232,W0401,W0613,W0631,W0703,I0011,W0403,R0914,W0110,C0330,C0326,F0401'
 let g:pymode_lint_unmodified = 1
 let g:pymode_options_colorcolumn = 0
 " let g:pymode_paths = [$HOME . "/anaconda/lib/python2.7", $HOME . "/anaconda/lib/python2.7/site-packages"]
